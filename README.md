@@ -1,6 +1,6 @@
 # Beemo
 
-TODO: Write a gem description
+This is a terrible wrapper for the Vimeo API
 
 ## Installation
 
@@ -20,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure
+--------
+
+```ruby
+Beemo.configuration[:access_token] = ENV["VIMEO_ACCESS_TOKEN"]
+```
+Use
+-----
+
+```ruby
+Beemo::User.search("search_term") # => A list of users
+Beemo::User.user_info("uid") # => A specific user
+```
+
 
 ## Contributing
 
