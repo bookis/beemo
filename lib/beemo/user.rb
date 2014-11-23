@@ -4,9 +4,11 @@ class Beemo::User
   attr_accessor :name, :location, :uid
 
   def initialize(data)
-    @name     = data["name"]
-    @location = data["location"]
-    @uid      = data["uri"].split("/").last
+    @name         =       data["name"]
+    @location     =       data["location"]
+    @uid          =       data["uri"].split("/").last
+    @profile_pics =       data["pictures"]
+    @url          =       data["link"]
   end
 
   def self.default_headers
